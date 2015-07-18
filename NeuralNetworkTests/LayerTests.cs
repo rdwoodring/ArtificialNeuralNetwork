@@ -92,7 +92,10 @@ namespace NeuralNetworkTests
             hidden.Nodes[2].Input = 3;
             hidden.Nodes[3].Input = 4;
 
-            hidden.FeedForward(hidden);
+            hidden.Biases = new List<double>() { 1, 1, 1 };
+            hidden.Weights = new List<double>() {1,1,1,1,1,1,1,1,1,1,1,1};
+
+            hidden.FeedForward(output);
         }
 
         [TestMethod]
